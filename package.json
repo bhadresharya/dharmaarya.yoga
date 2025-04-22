@@ -1,0 +1,27 @@
+{
+  "name": "provoked",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhadresharya/provoked.git"
+  },
+  "author": "Bhadresh Arya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhadresharya/provoked/issues"
+  },
+  "homepage": "https://github.com/bhadresharya/provoked#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.3",
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.0",
+    "sass": "^1.83.4"
+  }
+}
