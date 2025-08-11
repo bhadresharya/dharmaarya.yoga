@@ -80,6 +80,7 @@ figure {
         transform: scale(1);
         -webkit-transition: .4s ease-in-out;
         transition: .4s ease-in-out;
+
     }
 
     &:hover {
@@ -89,6 +90,10 @@ figure {
         img {
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
+
+            &.no-effect {
+                transform: none;
+            }
         }
     }
 }
@@ -167,7 +172,7 @@ body {
         }
 
         section {
-            @extend .pb-5;
+            @extend .pb-7;
             @extend .text-center;
 
             .heading {

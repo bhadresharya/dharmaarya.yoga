@@ -5641,7 +5641,7 @@ body main section .cta > .list-group + .card-footer {
   padding-bottom: 1.5rem !important;
 }
 
-.pb-5, body main section {
+.pb-5 {
   padding-bottom: 3rem !important;
 }
 
@@ -5649,7 +5649,7 @@ body main section .cta > .list-group + .card-footer {
   padding-bottom: 4rem !important;
 }
 
-.pb-7 {
+.pb-7, body main section {
   padding-bottom: 5rem !important;
 }
 
@@ -10018,6 +10018,9 @@ figure:hover {
 figure:hover img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+figure:hover img.no-effect {
+  transform: none;
 }
 
 .typewrite > .wrap::after {
