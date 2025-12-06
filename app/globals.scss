@@ -1,0 +1,241 @@
+@import "aos/dist/aos.css";
+@import "./scss/bootstrap";
+
+$logo-color-1: #e9252a;
+$logo-color-2: #f59a22;
+$logo-color-3: #f05a27;
+$logo-color-4: #fbd00d;
+
+* {
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $gray-300;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-600;
+
+    &:hover {
+      background-color: $gray-800;
+    }
+  }
+}
+
+.yeseva-one-regular {
+  font-family: var(--font-yeseva-one), "Yeseva One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lh-normal {
+  line-height: 1.4;
+}
+
+a.link {
+  position: relative;
+  padding-left: 1rem;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-weight: 500;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    margin: auto;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:hover {
+    padding-left: 0;
+
+    &::before {
+      left: 105%;
+    }
+  }
+}
+
+figure {
+  overflow: hidden;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+
+  img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+  }
+
+  &:hover {
+    -webkit-transform: scale(0.975);
+    transform: scale(0.975);
+
+    img {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+
+      &.no-effect {
+        transform: none;
+      }
+    }
+  }
+}
+
+.typewrite > .wrap::after {
+  content: "|";
+  font-weight: 500;
+  padding-right: 0.75rem;
+  animation: blink 500ms linear infinite alternate;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  header.header {
+    position: sticky;
+    top: -2rem;
+    padding-top: 3rem;
+    z-index: $zindex-sticky;
+    backdrop-filter: blur(15px);
+
+    .navbar-brand {
+      @extend .yeseva-one-regular;
+      transition: all 0.3s ease;
+      font-size: 2rem;
+
+      &.scrolled {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 10rem;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 15rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0rem;
+      padding-top: 10rem;
+    }
+
+    section {
+      padding-bottom: 5rem;
+      text-align: center;
+
+      .heading {
+        margin-bottom: 1.5rem;
+        @extend .yeseva-one-regular;
+      }
+
+      .sub-heading {
+        @extend .lead;
+        margin-bottom: 3rem;
+      }
+
+      .cta {
+        @extend .card;
+        @extend .card-body;
+        @extend .text-center;
+        @extend .bg-dark;
+        @extend .text-white;
+        @extend .rounded-0;
+        padding: 1.5rem;
+        padding: 3rem 1.5rem;
+
+        @media (min-width: 576px) {
+          padding: 3rem 1.5rem;
+        }
+
+        @media (min-width: 992px) {
+          padding: 5rem 1.5rem;
+        }
+      }
+
+      &.hero {
+        .project-statistics {
+          @extend .nav;
+          margin-bottom: 3rem;
+          flex-direction: column;
+
+          @media (min-width: 768px) {
+            flex-direction: row;
+          }
+
+          li {
+            @extend .nav-item;
+
+            & ~ li {
+              margin-left: 0;
+              margin-top: 1rem;
+
+              @media (min-width: 768px) {
+                margin-left: 1rem;
+                margin-top: 0;
+              }
+
+              @media (min-width: 992px) {
+                margin-left: 3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    footer.footer {
+      padding-bottom: 1rem;
+
+      .logo {
+        width: 150px;
+      }
+    }
+  }
+}
+
