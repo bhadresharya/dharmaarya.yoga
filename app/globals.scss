@@ -173,6 +173,30 @@ body {
         margin-bottom: 1.5rem;
         @extend .yeseva-one-regular;
       }
+      
+      // Ensure correct font sizes match original design
+      h1.heading {
+        font-size: $h1-font-size !important;
+      }
+      
+      h2.heading {
+        font-size: $h2-font-size !important;
+      }
+      
+      h3.heading {
+        font-size: $h3-font-size !important;
+      }
+      
+      // Ensure h3 class has correct font size
+      .h3 {
+        font-size: $h3-font-size !important;
+      }
+      
+      // Lead text font size
+      .lead {
+        font-size: $lead-font-size !important;
+        font-weight: $lead-font-weight !important;
+      }
 
       .sub-heading {
         @extend .lead;
